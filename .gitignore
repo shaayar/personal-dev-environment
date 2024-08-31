@@ -20,9 +20,6 @@
 .DS_Store
 *.pem
 
-#other
-/idea
-
 # debug
 npm-debug.log*
 yarn-debug.log*
