@@ -6,13 +6,21 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
-    },
+    extend: { },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        '.grid-areas': {
+          'grid-template-areas': 'Dashboard Diary Repos Pswd-Mngr Links',
+        },
+        '.Dashboard': { 'grid-area': 'Dashboard' },
+        '.Diary': { 'grid-area': 'Diary' },
+        '.Repos': { 'grid-area': 'Repos' },
+        '.Pswd-Mngr': { 'grid-area': 'Pswd-Mngr' },
+        '.Links': { 'grid-area': 'Links' },
+      });
+    },
+  ],
+  darkMode: 'class',  
 };
