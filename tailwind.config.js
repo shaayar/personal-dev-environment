@@ -8,44 +8,11 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
-      // gridTemplateAreas: {
-      //   'layout': [
-      //     'Dashboard',
-      //     'PswdMngr',
-      //     'Repos',
-      //     'Diary',
-      //     'Todo',
-      //     'Links-',
-      //   ],
-      // },
+    fontFamily: {
+      'bright': '"Very Bright"',
     },
+    extend: {},
   },
-  plugins: [
-    // gridAreas({
-    //   areas: {
-    //     layout: [
-    //       'Dashboard',
-    //       'PswdMngr',
-    //       'Repos',
-    //       'Diary',
-    //       'Todo',
-    //       'Links',
-    //     ],
-    //   },
-    // }),
-  //   function ({ addUtilities }) {
-  //     addUtilities({
-  //       '.grid-areas': {
-  //         'grid-template-areas': 'Dashboard Diary Repos Pswd-Mngr Links',
-  //       },
-  //       '.Dashboard': { 'grid-area': 'Dashboard' },
-  //       '.Diary': { 'grid-area': 'Diary' },
-  //       '.Repos': { 'grid-area': 'Repos' },
-  //       '.Pswd-Mngr': { 'grid-area': 'Pswd-Mngr' },
-  //       '.Links': { 'grid-area': 'Links' },
-  //     });
-  //   },
-    ],
+  plugins: [],
   darkMode: 'class',
 };

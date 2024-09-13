@@ -7,21 +7,20 @@ export default function Component() {
   const [activeTab, setActiveTab] = useState(0)
 
   const menuItems = [
-    { name: 'Dashboard', color: 'bg-blue-500', route: "/diary" },
-    { name: 'Diary', color: 'bg-yellow-500', route: "/diary" },
-    { name: 'Github Repos', color: 'bg-gray-500', route: "/repos" },
-    { name: 'Password Manager', color: 'bg-purple-500', route: "/diary" },
-    { name: 'To-do', color: 'bg-green-500', route: "/diary" },
-    { name: 'Links', color: 'bg-pink-500', route: "/diary" },
+    { name: 'Dashboard', color: 'bg-blue-500', route: "/Dashboard" },
+    { name: 'Diary', color: 'bg-yellow-500', route: "/Diary" },
+    { name: 'Github Repos', color: 'bg-gray-500', route: "/Repos" },
+    { name: 'Password Manager', color: 'bg-purple-500', route: "/PasswordManager" },
+    { name: 'To-do', color: 'bg-green-500', route: "/To-do" },
+    { name: 'Social Links', color: 'bg-pink-500', route: "/Links" },
   ]
 
   return (
     <div className="flex h-screen bg-black text-white">
-      <div className="w-1/2 p-8 flex flex-col justify-center">
-        <h1 className="text-6xl font-bold mb-4">Shubham Dave</h1>
-        <p className="text-xl">Explore our virtual galleries and discover amazing artworks from around the world.</p>
+      <div className="w-full p-8 flex flex-col justify-center">
+        <h1 className="text-6xl w-full text-center font-bold mb-4 transform -rotate-90 font-bright tracking-widest">Thy World</h1>
       </div>
-      <div className="w-1/2 flex items-center justify-end">
+      <div className="w-fit flex items-center justify-end">
         <div className="flex">
           {menuItems.map((item, index) => (
             <motion.div
@@ -32,9 +31,9 @@ export default function Component() {
             >
               <motion.span
                 className="text-2xl font-bold transform -rotate-90 whitespace-nowrap"
-                animate={{ opacity: activeTab === index ? 1 : 0.7 }}
+                whileHover={{ fontSize: '2vw' }}
               >
-                <Link href={`${item.route}`}>
+                <Link href={item.route}>
                   {item.name}
                 </Link>
               </motion.span>
